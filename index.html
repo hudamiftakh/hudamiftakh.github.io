@@ -1,1 +1,213 @@
-<H1>Hello World</H1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miftahul Huda — Senior Software Developer</title>
+  <meta name="description" content="Miftahul Huda, Senior Software Developer (Backend PHP/Laravel, Fullstack, Node.js) based in Surabaya, Indonesia. Open to remote work worldwide.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="nav">
+    <a href="#top" class="logo">MH<span>.</span></a>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-actions">
+      <button class="btn btn-outline btn-print" onclick="window.print()">Print / PDF CV</button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="hero-inner">
+      <p class="hero-kicker">👋 Hello, I'm</p>
+      <h1>Miftahul Huda</h1>
+      <p class="hero-role">Senior Software Developer</p>
+      <p class="hero-stack">Backend PHP / Laravel &nbsp;·&nbsp; Fullstack &nbsp;·&nbsp; Node.js &nbsp;·&nbsp; CodeIgniter</p>
+      <p class="hero-desc">Building reliable web applications and government information systems since 2021. Based in Surabaya, Indonesia — open to remote work worldwide.</p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+        <a href="https://github.com/hudamiftakh" target="_blank" rel="noopener" class="btn btn-ghost">GitHub ↗</a>
+      </div>
+      <div class="hero-meta">
+        <span>📍 Surabaya, Indonesia</span>
+        <span>🌐 Remote-friendly (UTC+7)</span>
+        <span>💼 5+ years experience</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title">About</h2>
+        <p class="lead">Senior Programmer at a Surabaya software house since 2021, focused on backend development with PHP (Laravel, CodeIgniter), fullstack JavaScript, and Node.js. I design and ship web applications end-to-end — from database modeling and REST APIs to deployment — with a track record of information systems used by East Java provincial and Surabaya city government agencies. I also build and run a SaaS WhatsApp bot platform integrated with the Meta WhatsApp Cloud API.</p>
+        <div class="stats">
+          <div class="stat"><strong>5+</strong><span>Years experience</span></div>
+          <div class="stat"><strong>7+</strong><span>Gov systems shipped</span></div>
+          <div class="stat"><strong>30+</strong><span>Repos on GitHub</span></div>
+          <div class="stat"><strong>1</strong><span>SaaS product (ChatWaBot)</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">2021 — Present</div>
+            <div class="timeline-body">
+              <h3>Senior Programmer</h3>
+              <p class="timeline-org">PT Zonakita Nusantara · Surabaya, Indonesia (Software House)</p>
+              <ul>
+                <li>Design, develop, and maintain web-based information systems for provincial and municipal government clients in East Java.</li>
+                <li>Build backend services with PHP (Laravel, CodeIgniter) and Node.js — REST APIs, database modeling (MySQL, PostgreSQL), and third-party integrations.</li>
+                <li>Develop WhatsApp gateway services and chatbot integrations, including Meta WhatsApp Cloud API (WABA) onboarding flows.</li>
+                <li>Handle full deployment cycle on VPS/cPanel hosting: server setup, SSL, backups, and performance tuning.</li>
+                <li>Collaborate directly with government stakeholders on requirements, UAT, and production support.</li>
+              </ul>
+              <div class="tags">
+                <span>PHP</span><span>Laravel</span><span>CodeIgniter</span><span>Node.js</span><span>JavaScript</span><span>MySQL</span><span>PostgreSQL</span><span>REST API</span><span>WhatsApp API</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="container">
+        <h2 class="section-title">Selected Projects</h2>
+        <div class="cards">
+          <article class="card card-featured">
+            <div class="card-badge">Personal SaaS</div>
+            <h3>ChatWaBot</h3>
+            <p>SaaS WhatsApp bot platform with multi-session support and Meta WhatsApp Cloud API (WABA Official) integration — template messaging, webhook handling, and per-tenant configuration.</p>
+            <div class="tags"><span>PHP</span><span>CodeIgniter</span><span>Node.js</span><span>Meta Cloud API</span></div>
+            <a href="https://github.com/hudamiftakh/chatwabot" target="_blank" rel="noopener" class="card-link">View on GitHub ↗</a>
+          </article>
+          <article class="card">
+            <h3>SIMPATA — Dishut Jatim</h3>
+            <p>Information system for the East Java Forestry Agency (Dinas Kehutanan Jawa Timur), streamlining forestry data management and reporting.</p>
+          </article>
+          <article class="card">
+            <h3>e-Monev Surabaya</h3>
+            <p>Monitoring &amp; evaluation system for Surabaya city government programs — tracking, reporting, and performance dashboards.</p>
+          </article>
+          <article class="card">
+            <h3>E-Absensi MIN 1 Jombang</h3>
+            <p>Digital attendance system for MIN 1 Jombang — QR-based check-in, recaps, and reporting for school administration.</p>
+          </article>
+          <article class="card">
+            <h3>WA Gateway — Satpol PP Jatim</h3>
+            <p>WhatsApp gateway service for the East Java Public Order Agency (Satpol PP), enabling official broadcast and notification messaging.</p>
+          </article>
+          <article class="card">
+            <h3>E-RKPD — Bappdalitbang Surabaya</h3>
+            <p>Regional work-plan (RKPD) information system for Surabaya's Development Planning Agency — planning data entry, review, and reporting workflows.</p>
+          </article>
+          <article class="card">
+            <h3>Sigamis Surabaya</h3>
+            <p>Social assistance data management system for Surabaya (Dinas Sosial) — beneficiary data processing and reporting.</p>
+            <div class="tags"><span>PostgreSQL</span><span>Data systems</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h3>Backend</h3>
+            <div class="tags"><span>PHP</span><span>Laravel</span><span>CodeIgniter</span><span>Node.js</span><span>TypeScript</span><span>REST API</span></div>
+          </div>
+          <div class="skill-group">
+            <h3>Frontend</h3>
+            <div class="tags"><span>JavaScript</span><span>React</span><span>HTML/CSS</span></div>
+          </div>
+          <div class="skill-group">
+            <h3>Database</h3>
+            <div class="tags"><span>MySQL</span><span>PostgreSQL</span><span>Database design</span></div>
+          </div>
+          <div class="skill-group">
+            <h3>Integrations</h3>
+            <div class="tags"><span>WhatsApp Cloud API (Meta)</span><span>Webhooks</span><span>Third-party APIs</span></div>
+          </div>
+          <div class="skill-group">
+            <h3>DevOps &amp; Tools</h3>
+            <div class="tags"><span>Git / GitHub</span><span>Linux VPS</span><span>cPanel</span><span>Deployment</span></div>
+          </div>
+          <div class="skill-group">
+            <h3>Languages</h3>
+            <div class="tags"><span>Indonesian (Native)</span><span>English (Working)</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <div class="container">
+        <h2 class="section-title">Education</h2>
+        <div class="edu-list">
+          <div class="edu-item">
+            <div class="edu-degree">Bachelor's Degree — Information Systems (S1 Sistem Informasi)</div>
+            <div class="edu-school">UNIPDU Jombang — Universitas Pesantren Darul Ulum</div>
+          </div>
+          <div class="edu-item">
+            <div class="edu-degree">Diploma</div>
+            <div class="edu-school">ITS Surabaya — Institut Teknologi Sepuluh Nopember</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-alt">
+      <div class="container contact-box">
+        <h2 class="section-title">Let's Work Together</h2>
+        <p class="lead">I'm currently looking for remote software developer roles — backend PHP/Laravel, fullstack, or Node.js. My inbox is always open.</p>
+        <div class="contact-grid">
+          <a class="contact-card" href="mailto:hudamiftakh8@gmail.com">
+            <span class="contact-icon">✉️</span>
+            <strong>Email</strong>
+            <span>hudamiftakh8@gmail.com</span>
+          </a>
+          <a class="contact-card" href="tel:+6285748496135">
+            <span class="contact-icon">📱</span>
+            <strong>Phone / WhatsApp</strong>
+            <span>+62 857-4849-6135</span>
+          </a>
+          <a class="contact-card" href="https://github.com/hudamiftakh" target="_blank" rel="noopener">
+            <span class="contact-icon">💻</span>
+            <strong>GitHub</strong>
+            <span>github.com/hudamiftakh</span>
+          </a>
+          <div class="contact-card">
+            <span class="contact-icon">📍</span>
+            <strong>Location</strong>
+            <span>Surabaya, Indonesia (UTC+7)</span>
+          </div>
+        </div>
+        <button class="btn btn-primary btn-print" onclick="window.print()">Download CV as PDF</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Miftahul Huda · Built with plain HTML/CSS · <a href="https://github.com/hudamiftakh/hudamiftakh.github.io" target="_blank" rel="noopener">Source</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
