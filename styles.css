@@ -176,6 +176,19 @@ body {
 .edu-school { color: var(--muted); }
 .cert-featured { border-left-color: #d99a17; background: linear-gradient(90deg, #fff8e6, #ffffff); }
 
+/* ---------- Certificate gallery ---------- */
+.gallery-title { font-size: 1.05rem; margin: 30px 0 16px; color: var(--ink); }
+.gallery-hint { font-size: .8rem; color: var(--muted); font-weight: 400; }
+.cert-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.cert-shot {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 12px;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.cert-shot:hover { transform: translateY(-3px); box-shadow: 0 12px 26px rgba(15,27,45,.10); }
+.cert-shot img { width: 100%; height: auto; border-radius: 8px; display: block; cursor: zoom-in; }
+.cert-shot figcaption { font-size: .82rem; color: var(--muted); font-weight: 600; padding: 10px 4px 2px; text-align: center; }
+
 /* ---------- Contact ---------- */
 .contact-box { text-align: center; }
 .contact-box .section-title { display: inline-block; }
@@ -215,6 +228,7 @@ a.contact-card:hover { transform: translateY(-3px); box-shadow: 0 12px 26px rgba
 }
 @media (max-width: 560px) {
   .cards, .skills-grid, .contact-grid { grid-template-columns: 1fr; }
+  .cert-gallery { grid-template-columns: 1fr; }
   .section { padding: 60px 0; }
   .hero-top { flex-direction: column; text-align: center; gap: 24px; }
   .hero-cta { justify-content: center; }
@@ -227,7 +241,8 @@ a.contact-card:hover { transform: translateY(-3px); box-shadow: 0 12px 26px rgba
   * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 
   .nav, .hero-cta, .btn, .hamburger, .footer,
-  .card-link, .card-badge, .stats, .hero-kicker { display: none !important; }
+  .card-link, .card-badge, .stats, .hero-kicker,
+  .cert-gallery, .gallery-title { display: none !important; }
 
   body { font-size: 10pt; line-height: 1.45; color: #1c1c1c; }
 
