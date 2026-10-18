@@ -90,6 +90,18 @@ body {
   padding: 110px 0 96px;
 }
 .hero-inner { max-width: 1040px; margin: 0 auto; padding: 0 24px; }
+.hero-top { display: flex; gap: 40px; align-items: center; }
+.avatar {
+  position: relative; flex-shrink: 0;
+  width: 172px; height: 172px; border-radius: 50%;
+  background: linear-gradient(135deg, #0e7c66, #17a586);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 3.2rem; font-weight: 800; color: #fff;
+  border: 5px solid rgba(255,255,255,.22);
+  box-shadow: 0 16px 40px rgba(0,0,0,.35);
+  overflow: hidden;
+}
+.avatar img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .hero-kicker { color: #9fd9c9; font-weight: 600; margin-bottom: 8px; }
 .hero h1 { font-size: clamp(2.6rem, 6vw, 4.2rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; }
 .hero-role { font-size: 1.35rem; font-weight: 600; color: #d7e7e1; margin-top: 10px; }
@@ -203,20 +215,75 @@ a.contact-card:hover { transform: translateY(-3px); box-shadow: 0 12px 26px rgba
 @media (max-width: 560px) {
   .cards, .skills-grid, .contact-grid { grid-template-columns: 1fr; }
   .section { padding: 60px 0; }
+  .hero-top { flex-direction: column; text-align: center; gap: 24px; }
+  .hero-cta { justify-content: center; }
 }
 
-/* ---------- Print: clean one-column CV ---------- */
+/* ---------- Print: professional one-column CV (A4) ---------- */
+@page { size: A4; margin: 12mm 11mm; }
+
 @media print {
-  .nav, .hero-cta, .btn-print, .hamburger, .footer, .card-link { display: none !important; }
-  .hero { background: none; color: var(--ink); padding: 0 0 12px; }
-  .hero-inner { padding: 0; }
-  .hero-kicker, .hero-stack, .hero-meta, .hero-desc { color: var(--muted); }
-  .hero h1 { font-size: 2rem; }
-  .hero-role { color: var(--ink); }
-  .section { padding: 18px 0; page-break-inside: avoid; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  .nav, .hero-cta, .btn, .hamburger, .footer,
+  .card-link, .card-badge, .stats, .hero-kicker { display: none !important; }
+
+  body { font-size: 10pt; line-height: 1.45; color: #1c1c1c; }
+
+  /* Header -> CV masthead */
+  .hero { background: none; color: #1c1c1c; padding: 0 0 10px; border-bottom: 3px solid #0e7c66; margin-bottom: 4px; }
+  .hero-inner { padding: 0; max-width: none; }
+  .hero-top { gap: 22px; align-items: center; }
+  .avatar {
+    width: 92px; height: 92px; font-size: 1.7rem;
+    border: 3px solid #0e7c66; box-shadow: none;
+  }
+  .hero h1 { font-size: 23pt; letter-spacing: -0.02em; }
+  .hero-role { color: #0e7c66; font-size: 12.5pt; margin-top: 2px; }
+  .hero-stack { color: #444; font-size: 9.5pt; margin-top: 4px; }
+  .hero-desc { color: #444; font-size: 9.5pt; margin-top: 8px; max-width: none; }
+  .hero-meta { margin-top: 10px; gap: 14px; font-size: 8.5pt; color: #555; }
+
+  /* Sections */
+  .section { padding: 10px 0; page-break-inside: avoid; }
   .section-alt { background: none; }
-  .cards, .skills-grid, .contact-grid, .stats { grid-template-columns: 1fr 1fr; }
-  .card, .stat, .skill-group, .contact-card, .edu-item { box-shadow: none; break-inside: avoid; }
-  a { color: var(--ink); text-decoration: none; }
-  body { font-size: 11pt; line-height: 1.5; }
+  .section-title { font-size: 12pt; margin-bottom: 8px; padding-bottom: 5px; }
+  .section-title::after { width: 44px; height: 3px; }
+  .lead { font-size: 9.5pt; max-width: none; }
+
+  /* Experience */
+  .timeline-item { grid-template-columns: 120px 1fr; gap: 16px; }
+  .timeline-date { font-size: 9pt; }
+  .timeline-body h3 { font-size: 11pt; }
+  .timeline-org { font-size: 9pt; margin: 2px 0 8px; }
+  .timeline-body ul { font-size: 9.5pt; gap: 4px; margin-bottom: 10px; }
+
+  /* Projects: compact 2-col */
+  .cards { grid-template-columns: 1fr 1fr; gap: 8px; }
+  .card { padding: 9px 12px; gap: 4px; box-shadow: none; border-radius: 8px; }
+  .card h3 { font-size: 10pt; }
+  .card p { font-size: 8.8pt; line-height: 1.4; }
+
+  /* Skills: compact 3-col */
+  .skills-grid { grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+  .skill-group { padding: 9px 12px; border-radius: 8px; }
+  .skill-group h3 { font-size: 9pt; margin-bottom: 8px; }
+  .tags { gap: 5px; }
+  .tags span { font-size: 7.8pt; padding: 2px 8px; }
+
+  /* Education */
+  .edu-item { padding: 9px 14px; border-radius: 8px; }
+  .edu-degree { font-size: 10pt; }
+  .edu-school { font-size: 9pt; }
+
+  /* Contact: compact 2-col, no big cards */
+  .contact-box .lead { margin-bottom: 12px; font-size: 9.5pt; }
+  .contact-grid { grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 0; }
+  .contact-card { padding: 9px 14px; border-radius: 8px; flex-direction: row; align-items: center; gap: 10px; }
+  .contact-icon { font-size: 1.1rem; }
+  .contact-card strong { font-size: 7.5pt; }
+  .contact-card span:last-child { font-size: 9pt; }
+
+  a { color: #1c1c1c; text-decoration: none; }
+  .container { padding: 0; max-width: none; }
 }
