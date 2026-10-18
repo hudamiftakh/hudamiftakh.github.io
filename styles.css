@@ -177,17 +177,31 @@ body {
 .cert-featured { border-left-color: #d99a17; background: linear-gradient(90deg, #fff8e6, #ffffff); }
 
 /* ---------- Certificate gallery ---------- */
-.gallery-title { font-size: 1.05rem; margin: 30px 0 16px; color: var(--ink); }
-.gallery-hint { font-size: .8rem; color: var(--muted); font-weight: 400; }
-.cert-gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.gallery-title {
+  font-size: 1.02rem; font-weight: 700; color: var(--ink);
+  margin: 38px 0 18px; padding-top: 28px;
+  border-top: 1px solid var(--border);
+}
+.gallery-hint { font-size: .78rem; color: var(--muted); font-weight: 400; }
+.cert-gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .cert-shot {
   background: var(--card); border: 1px solid var(--border);
-  border-radius: var(--radius); padding: 12px;
+  border-radius: 12px; padding: 10px; margin: 0;
   transition: transform .15s ease, box-shadow .15s ease;
+  display: flex; flex-direction: column;
 }
 .cert-shot:hover { transform: translateY(-3px); box-shadow: 0 12px 26px rgba(15,27,45,.10); }
-.cert-shot img { width: 100%; height: auto; border-radius: 8px; display: block; cursor: zoom-in; }
-.cert-shot figcaption { font-size: .82rem; color: var(--muted); font-weight: 600; padding: 10px 4px 2px; text-align: center; }
+.cert-shot a { display: block; border-radius: 8px; overflow: hidden; }
+.cert-shot img {
+  width: 100%; aspect-ratio: 4/3; object-fit: cover; object-position: top center;
+  display: block; cursor: zoom-in;
+  transition: transform .25s ease;
+}
+.cert-shot a:hover img { transform: scale(1.04); }
+.cert-shot figcaption {
+  font-size: .76rem; color: var(--muted); font-weight: 600;
+  padding: 10px 2px 2px; text-align: center; line-height: 1.4;
+}
 
 /* ---------- Contact ---------- */
 .contact-box { text-align: center; }
@@ -214,6 +228,7 @@ a.contact-card:hover { transform: translateY(-3px); box-shadow: 0 12px 26px rgba
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
   .cards, .skills-grid { grid-template-columns: 1fr 1fr; }
+  .cert-gallery { grid-template-columns: 1fr 1fr; }
   .stats { grid-template-columns: 1fr 1fr; }
   .contact-grid { grid-template-columns: 1fr 1fr; }
   .timeline-item { grid-template-columns: 1fr; gap: 8px; }
