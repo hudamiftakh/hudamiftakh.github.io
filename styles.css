@@ -101,7 +101,7 @@ body {
   box-shadow: 0 16px 40px rgba(0,0,0,.35);
   overflow: hidden;
 }
-.avatar img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.avatar img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 25%; }
 .hero-kicker { color: #9fd9c9; font-weight: 600; margin-bottom: 8px; }
 .hero h1 { font-size: clamp(2.6rem, 6vw, 4.2rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.05; }
 .hero-role { font-size: 1.35rem; font-weight: 600; color: #d7e7e1; margin-top: 10px; }
