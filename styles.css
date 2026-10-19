@@ -65,6 +65,19 @@ body {
 .nav-actions { display: flex; align-items: center; gap: 12px; }
 .hamburger { display: none; background: none; border: none; font-size: 1.4rem; cursor: pointer; color: var(--ink); }
 
+/* ---------- Language toggle ---------- */
+.lang-toggle {
+  display: flex; border: 1px solid var(--border); border-radius: 999px;
+  overflow: hidden; background: #fff;
+}
+.lang-btn {
+  border: none; background: none; padding: 8px 13px;
+  font-size: .78rem; font-weight: 700; letter-spacing: .03em;
+  cursor: pointer; color: var(--muted); font-family: inherit;
+}
+.lang-btn.active { background: var(--accent); color: #fff; }
+.lang-btn:not(.active):hover { color: var(--accent); }
+
 /* ---------- Buttons ---------- */
 .btn {
   display: inline-block;
