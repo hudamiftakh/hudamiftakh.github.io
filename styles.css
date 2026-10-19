@@ -148,25 +148,31 @@ body {
 }
 .section-alt .tags span { background: #fff; border: 1px solid var(--border); }
 
-/* ---------- Cards ---------- */
-.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.card {
+/* ---------- Project list ---------- */
+.proj-list { display: flex; flex-direction: column; gap: 12px; }
+.proj-item {
   background: var(--card); border: 1px solid var(--border);
-  border-radius: var(--radius); padding: 26px;
-  display: flex; flex-direction: column; gap: 10px;
-  transition: transform .15s ease, box-shadow .15s ease;
-  position: relative;
+  border-radius: var(--radius); padding: 18px 22px;
+  display: grid; grid-template-columns: 1fr auto; gap: 4px 24px; align-items: start;
+  transition: border-color .15s ease, box-shadow .15s ease;
 }
-.card:hover { transform: translateY(-4px); box-shadow: 0 14px 32px rgba(15,27,45,.10); }
-.card h3 { font-size: 1.08rem; }
-.card p { color: var(--muted); font-size: .93rem; flex: 1; }
-.card-badge {
-  position: absolute; top: -12px; right: 18px;
+.proj-item:hover { border-color: var(--accent); box-shadow: 0 8px 22px rgba(15,27,45,.08); }
+.proj-title-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.proj-item h3 { font-size: 1.05rem; }
+.proj-item p { color: var(--muted); font-size: .93rem; }
+.proj-item .tags { margin-top: 8px; }
+.proj-badge {
   background: var(--accent); color: #fff;
-  font-size: .72rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
-  padding: 4px 12px; border-radius: 999px;
+  font-size: .7rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+  padding: 3px 10px; border-radius: 999px; white-space: nowrap;
 }
-.card-featured { border: 2px solid var(--accent); }
+.proj-featured { border: 2px solid var(--accent); }
+.proj-link {
+  color: var(--accent); font-weight: 600; text-decoration: none; font-size: .9rem;
+  white-space: nowrap; grid-column: 2; grid-row: 1 / -1; align-self: center;
+}
+.proj-link:hover { text-decoration: underline; }
+/* experience section link keeps card-link */
 .card-link { color: var(--accent); font-weight: 600; text-decoration: none; font-size: .9rem; }
 .card-link:hover { text-decoration: underline; }
 
@@ -240,7 +246,7 @@ a.contact-card:hover { transform: translateY(-3px); box-shadow: 0 12px 26px rgba
 
 /* ---------- Responsive ---------- */
 @media (max-width: 860px) {
-  .cards, .skills-grid { grid-template-columns: 1fr 1fr; }
+  .skills-grid { grid-template-columns: 1fr 1fr; }
   .cert-gallery { grid-template-columns: 1fr 1fr; }
   .stats { grid-template-columns: 1fr 1fr; }
   .contact-grid { grid-template-columns: 1fr 1fr; }
@@ -255,7 +261,9 @@ a.contact-card:hover { transform: translateY(-3px); box-shadow: 0 12px 26px rgba
   .nav { position: sticky; }
 }
 @media (max-width: 560px) {
-  .cards, .skills-grid, .contact-grid { grid-template-columns: 1fr; }
+  .skills-grid, .contact-grid { grid-template-columns: 1fr; }
+  .proj-item { grid-template-columns: 1fr; }
+  .proj-link { grid-column: 1; grid-row: auto; justify-self: start; }
   .cert-gallery { grid-template-columns: 1fr; }
   .section { padding: 60px 0; }
   .hero-top { flex-direction: column; text-align: center; gap: 24px; }
@@ -269,7 +277,7 @@ a.contact-card:hover { transform: translateY(-3px); box-shadow: 0 12px 26px rgba
   * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 
   .nav, .hero-cta, .btn, .hamburger, .footer,
-  .card-link, .card-badge, .stats, .hero-kicker,
+  .card-link, .proj-link, .proj-badge, .stats, .hero-kicker,
   .cert-gallery, .gallery-title { display: none !important; }
 
   body { font-size: 10pt; line-height: 1.45; color: #1c1c1c; }
@@ -302,11 +310,11 @@ a.contact-card:hover { transform: translateY(-3px); box-shadow: 0 12px 26px rgba
   .timeline-org { font-size: 9pt; margin: 2px 0 8px; }
   .timeline-body ul { font-size: 9.5pt; gap: 4px; margin-bottom: 10px; }
 
-  /* Projects: compact 2-col */
-  .cards { grid-template-columns: 1fr 1fr; gap: 8px; }
-  .card { padding: 9px 12px; gap: 4px; box-shadow: none; border-radius: 8px; }
-  .card h3 { font-size: 10pt; }
-  .card p { font-size: 8.8pt; line-height: 1.4; }
+  /* Projects: compact list */
+  .proj-list { gap: 6px; }
+  .proj-item { padding: 8px 12px; gap: 2px 16px; box-shadow: none; border-radius: 8px; }
+  .proj-item h3 { font-size: 10pt; }
+  .proj-item p { font-size: 8.8pt; line-height: 1.4; }
 
   /* Skills: compact 3-col */
   .skills-grid { grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
