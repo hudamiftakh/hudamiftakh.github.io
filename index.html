@@ -14,16 +14,20 @@
   <nav class="nav">
     <a href="#top" class="logo">MH<span>.</span></a>
     <div class="nav-links" id="navLinks">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#experience" data-i18n="nav.experience">Experience</a>
+      <a href="#projects" data-i18n="nav.projects">Projects</a>
+      <a href="#skills" data-i18n="nav.skills">Skills</a>
+      <a href="#certifications" data-i18n="nav.certifications">Certifications</a>
+      <a href="#education" data-i18n="nav.education">Education</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
     </div>
     <div class="nav-actions">
-      <button class="btn btn-outline btn-print" onclick="window.print()">Print / PDF CV</button>
+      <div class="lang-toggle" role="group" aria-label="Language / Bahasa">
+        <button type="button" class="lang-btn" data-lang="id">ID</button>
+        <button type="button" class="lang-btn active" data-lang="en">EN</button>
+      </div>
+      <button class="btn btn-outline btn-print" onclick="window.print()" data-i18n="btn.print">Print / PDF CV</button>
       <button class="hamburger" id="hamburger" aria-label="Menu">☰</button>
     </div>
   </nav>
@@ -33,21 +37,21 @@
       <div class="hero-top">
       <div class="avatar"><span>MH</span><img src="data:image/jpeg;base64,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" alt="Miftahul Huda"></div>
       <div class="hero-text">
-      <p class="hero-kicker">👋 Hello, I'm</p>
+      <p class="hero-kicker" data-i18n="hero.kicker">👋 Hello, I'm</p>
       <h1>Miftahul Huda</h1>
-      <p class="hero-role">Senior Software Developer</p>
+      <p class="hero-role" data-i18n="hero.role">Senior Software Developer</p>
       <p class="hero-stack">Backend PHP / Laravel &nbsp;·&nbsp; Fullstack &nbsp;·&nbsp; Node.js &nbsp;·&nbsp; CodeIgniter</p>
-      <p class="hero-desc">Building reliable web applications, corporate dashboards, and government information systems since 2016. Based in Surabaya, Indonesia — open to remote work worldwide.</p>
+      <p class="hero-desc" data-i18n="hero.desc">Building reliable web applications, corporate dashboards, and government information systems since 2016. Based in Surabaya, Indonesia — open to remote work worldwide.</p>
       <div class="hero-cta">
-        <a href="#contact" class="btn btn-primary">Get in Touch</a>
+        <a href="#contact" class="btn btn-primary" data-i18n="hero.cta">Get in Touch</a>
         <a href="https://github.com/hudamiftakh" target="_blank" rel="noopener" class="btn btn-ghost">GitHub ↗</a>
       </div>
       </div>
       </div>
       <div class="hero-meta">
         <span>📍 Surabaya, Indonesia</span>
-        <span>🌐 Remote-friendly (UTC+7)</span>
-        <span>💼 10+ years experience</span>
+        <span data-i18n="hero.meta.remote">🌐 Remote-friendly (UTC+7)</span>
+        <span data-i18n="hero.meta.exp">💼 10+ years experience</span>
       </div>
     </div>
   </header>
@@ -55,32 +59,32 @@
   <main>
     <section id="about" class="section">
       <div class="container">
-        <h2 class="section-title">About</h2>
-        <p class="lead">Software developer with 10 years of experience (since 2016) — as a Senior Programmer at a Surabaya software house since 2021, a freelance developer for Indonesian clients, and a contract developer at Blue Bird Group. I build backend systems with PHP (Laravel, CodeIgniter), fullstack JavaScript, and Node.js — from database modeling and REST APIs to production deployment. My work spans government information systems, corporate dashboards, housing management, e-contract apps, and city websites, plus a SaaS WhatsApp bot platform integrated with the Meta WhatsApp Cloud API that I built and operate myself.</p>
+        <h2 class="section-title" data-i18n="about.title">About</h2>
+        <p class="lead" data-i18n="about.lead">Software developer with 10 years of experience (since 2016) — as a Senior Programmer at a Surabaya software house since 2021, a freelance developer for Indonesian clients, and a contract developer at Blue Bird Group. I build backend systems with PHP (Laravel, CodeIgniter), fullstack JavaScript, and Node.js — from database modeling and REST APIs to production deployment. My work spans government information systems, corporate dashboards, housing management, e-contract apps, and city websites, plus a SaaS WhatsApp bot platform integrated with the Meta WhatsApp Cloud API that I built and operate myself.</p>
         <div class="stats">
-          <div class="stat"><strong>10</strong><span>Years experience</span></div>
-          <div class="stat"><strong>12</strong><span>Production systems shipped</span></div>
-          <div class="stat"><strong>30+</strong><span>Repos on GitHub</span></div>
-          <div class="stat"><strong>1</strong><span>SaaS product (ChatWaBot)</span></div>
+          <div class="stat"><strong>10</strong><span data-i18n="about.stat.years">Years experience</span></div>
+          <div class="stat"><strong>12</strong><span data-i18n="about.stat.systems">Production systems shipped</span></div>
+          <div class="stat"><strong>30+</strong><span data-i18n="about.stat.repos">Repos on GitHub</span></div>
+          <div class="stat"><strong>1</strong><span data-i18n="about.stat.saas">SaaS product (ChatWaBot)</span></div>
         </div>
       </div>
     </section>
 
     <section id="experience" class="section section-alt">
       <div class="container">
-        <h2 class="section-title">Experience</h2>
+        <h2 class="section-title" data-i18n="exp.title">Experience</h2>
         <div class="timeline">
           <div class="timeline-item">
             <div class="timeline-date">2021 — Present</div>
             <div class="timeline-body">
-              <h3>Senior Programmer</h3>
+              <h3 data-i18n="exp.job1">Senior Programmer</h3>
               <p class="timeline-org">PT Zonakita Nusantara · Surabaya, Indonesia (Software House)</p>
               <ul>
-                <li>Design, develop, and maintain web-based information systems for provincial and municipal government clients in East Java.</li>
-                <li>Build backend services with PHP (Laravel, CodeIgniter) and Node.js — REST APIs, database modeling (MySQL, PostgreSQL), and third-party integrations.</li>
-                <li>Develop WhatsApp gateway services and chatbot integrations, including Meta WhatsApp Cloud API (WABA) onboarding flows.</li>
-                <li>Handle full deployment cycle on VPS/cPanel hosting: server setup, SSL, backups, and performance tuning.</li>
-                <li>Collaborate directly with government stakeholders on requirements, UAT, and production support.</li>
+                <li data-i18n="exp.b1">Design, develop, and maintain web-based information systems for provincial and municipal government clients in East Java.</li>
+                <li data-i18n="exp.b2">Build backend services with PHP (Laravel, CodeIgniter) and Node.js — REST APIs, database modeling (MySQL, PostgreSQL), and third-party integrations.</li>
+                <li data-i18n="exp.b3">Develop WhatsApp gateway services and chatbot integrations, including Meta WhatsApp Cloud API (WABA) onboarding flows.</li>
+                <li data-i18n="exp.b4">Handle full deployment cycle on VPS/cPanel hosting: server setup, SSL, backups, and performance tuning.</li>
+                <li data-i18n="exp.b5">Collaborate directly with government stakeholders on requirements, UAT, and production support.</li>
               </ul>
               <div class="tags">
                 <span>PHP</span><span>Laravel</span><span>CodeIgniter</span><span>Node.js</span><span>JavaScript</span><span>MySQL</span><span>PostgreSQL</span><span>REST API</span><span>WhatsApp API</span>
@@ -90,11 +94,11 @@
           <div class="timeline-item">
             <div class="timeline-date">Jan 2026 — Jun 2026</div>
             <div class="timeline-body">
-              <h3>Software Developer (Contract)</h3>
+              <h3 data-i18n="exp.job2">Software Developer (Contract)</h3>
               <p class="timeline-org">PT Bluebird · Jakarta, Indonesia (Blue Bird Group)</p>
               <ul>
-                <li>Built the <strong>Blue Bird Performance Monitor</strong> dashboard application — fleet/operations monitoring with real-time data views and reporting.</li>
-                <li>Delivered a production-ready internal tool used for operational oversight across the group.</li>
+                <li data-i18n="exp.b6">Built the <strong>Blue Bird Performance Monitor</strong> dashboard application — fleet/operations monitoring with real-time data views and reporting.</li>
+                <li data-i18n="exp.b7">Delivered a production-ready internal tool used for operational oversight across the group.</li>
               </ul>
               <div class="tags">
                 <span>PHP</span><span>JavaScript</span><span>Dashboard</span><span>MySQL</span>
@@ -105,11 +109,11 @@
           <div class="timeline-item">
             <div class="timeline-date">2016 — Present</div>
             <div class="timeline-body">
-              <h3>Freelance Developer</h3>
+              <h3 data-i18n="exp.job3">Freelance Developer</h3>
               <p class="timeline-org">Independent · Indonesian clients</p>
               <ul>
-                <li>Design and deliver web applications for domestic clients across government and private sectors — from requirements and database design to deployment and maintenance.</li>
-                <li>Representative work: housing management system (Perum TSI, Sidoarjo), e-contract application (PT ITS Sains Tekno, Surabaya), official city website (Kota Tual).</li>
+                <li data-i18n="exp.b8">Design and deliver web applications for domestic clients across government and private sectors — from requirements and database design to deployment and maintenance.</li>
+                <li data-i18n="exp.b9">Representative work: housing management system (Perum TSI, Sidoarjo), e-contract application (PT ITS Sains Tekno, Surabaya), official city website (Kota Tual).</li>
               </ul>
               <div class="tags">
                 <span>PHP</span><span>Laravel</span><span>CodeIgniter</span><span>JavaScript</span><span>MySQL</span>
@@ -122,73 +126,73 @@
 
     <section id="projects" class="section">
       <div class="container">
-        <h2 class="section-title">Selected Projects</h2>
+        <h2 class="section-title" data-i18n="proj.title">Selected Projects</h2>
         <div class="cards">
           <article class="card card-featured">
-            <div class="card-badge">Personal SaaS</div>
+            <div class="card-badge" data-i18n="proj.badge">Personal SaaS</div>
             <h3>ChatWaBot</h3>
-            <p>SaaS WhatsApp bot platform with multi-session support and Meta WhatsApp Cloud API (WABA Official) integration — template messaging, webhook handling, and per-tenant configuration.</p>
+            <p data-i18n="proj.d1">SaaS WhatsApp bot platform with multi-session support and Meta WhatsApp Cloud API (WABA Official) integration — template messaging, webhook handling, and per-tenant configuration.</p>
             <div class="tags"><span>PHP</span><span>CodeIgniter</span><span>Node.js</span><span>Meta Cloud API</span></div>
             <a href="https://app.wabot.web.id/" target="_blank" rel="noopener" class="card-link">app.wabot.web.id ↗</a>
           </article>
           <article class="card">
             <h3>SIMPATA — Dishut Jatim</h3>
-            <p>Information system for the East Java Forestry Agency (Dinas Kehutanan Jawa Timur), streamlining forestry data management and reporting.</p>
+            <p data-i18n="proj.d2">Information system for the East Java Forestry Agency (Dinas Kehutanan Jawa Timur), streamlining forestry data management and reporting.</p>
           </article>
           <article class="card">
             <h3>e-Monev Surabaya</h3>
-            <p>Monitoring &amp; evaluation system for Surabaya city government programs — tracking, reporting, and performance dashboards.</p>
+            <p data-i18n="proj.d3">Monitoring &amp; evaluation system for Surabaya city government programs — tracking, reporting, and performance dashboards.</p>
           </article>
           <article class="card">
             <h3>E-Absensi MIN 1 Jombang</h3>
-            <p>Digital attendance system for MIN 1 Jombang — QR-based check-in, recaps, and reporting for school administration.</p>
+            <p data-i18n="proj.d4">Digital attendance system for MIN 1 Jombang — QR-based check-in, recaps, and reporting for school administration.</p>
           </article>
           <article class="card">
             <h3>WA Gateway — Satpol PP Jatim</h3>
-            <p>WhatsApp gateway service for the East Java Public Order Agency (Satpol PP), enabling official broadcast and notification messaging.</p>
+            <p data-i18n="proj.d5">WhatsApp gateway service for the East Java Public Order Agency (Satpol PP), enabling official broadcast and notification messaging.</p>
           </article>
           <article class="card">
             <h3>E-RKPD — Bappdalitbang Surabaya</h3>
-            <p>Regional work-plan (RKPD) information system for Surabaya's Development Planning Agency — planning data entry, review, and reporting workflows.</p>
+            <p data-i18n="proj.d6">Regional work-plan (RKPD) information system for Surabaya's Development Planning Agency — planning data entry, review, and reporting workflows.</p>
           </article>
           <article class="card">
             <h3>Sigamis Surabaya</h3>
-            <p>Social assistance data management system for Surabaya (Dinas Sosial) — beneficiary data processing and reporting.</p>
+            <p data-i18n="proj.d7">Social assistance data management system for Surabaya (Dinas Sosial) — beneficiary data processing and reporting.</p>
             <div class="tags"><span>PostgreSQL</span><span>Data systems</span></div>
           </article>
           <article class="card">
             <h3>Blue Bird Performance Monitor</h3>
-            <p>Operations monitoring dashboard for Blue Bird Group — real-time performance views and reporting for fleet operations.</p>
+            <p data-i18n="proj.d8">Operations monitoring dashboard for Blue Bird Group — real-time performance views and reporting for fleet operations.</p>
             <a href="https://bbmonitor.web.id/" target="_blank" rel="noopener" class="card-link">bbmonitor.web.id ↗</a>
           </article>
           <article class="card">
             <h3>Manajemen Perumahan TSI</h3>
-            <p>Housing estate management system for Perum TSI, Sidoarjo — resident data, billing, and operational reporting.</p>
+            <p data-i18n="proj.d9">Housing estate management system for Perum TSI, Sidoarjo — resident data, billing, and operational reporting.</p>
             <a href="https://manajemenperumtsi.web.id/" target="_blank" rel="noopener" class="card-link">manajemenperumtsi.web.id ↗</a>
           </article>
           <article class="card">
             <h3>E-Kontrak — PT ITS Sains Tekno</h3>
-            <p>Electronic contract management application for PT ITS Sains Tekno, Surabaya — contract drafting, approval workflows, and document tracking.</p>
+            <p data-i18n="proj.d10">Electronic contract management application for PT ITS Sains Tekno, Surabaya — contract drafting, approval workflows, and document tracking.</p>
           </article>
           <article class="card">
             <h3>Website Kota Tual</h3>
-            <p>Official city website for Kota Tual — public information portal and government profile.</p>
+            <p data-i18n="proj.d11">Official city website for Kota Tual — public information portal and government profile.</p>
             <a href="https://tualkota.go.id/" target="_blank" rel="noopener" class="card-link">tualkota.go.id ↗</a>
           </article>
           <article class="card">
             <h3>SiniSelf — Photo Booking</h3>
-            <p>Online booking application for a photo studio — session scheduling, package selection, and customer management.</p>
+            <p data-i18n="proj.d12">Online booking application for a photo studio — session scheduling, package selection, and customer management.</p>
             <a href="https://siniself.com/" target="_blank" rel="noopener" class="card-link">siniself.com ↗</a>
           </article>
           <article class="card">
             <h3>EduPrime — School Website</h3>
-            <p>School profile website for EduPrime — school profile, PPDB (new student admission) info, facilities, achievements, and news.</p>
+            <p data-i18n="proj.d13">School profile website for EduPrime — school profile, PPDB (new student admission) info, facilities, achievements, and news.</p>
             <div class="tags"><span>WordPress</span><span>Custom Theme</span></div>
             <a href="https://eduprime.wabot.web.id/" target="_blank" rel="noopener" class="card-link">eduprime.wabot.web.id ↗</a>
           </article>
           <article class="card">
             <h3>Digital Minsajo — MIN 1 Jombang</h3>
-            <p>Digital ecosystem portal (ALMAS) for MIN 1 Jombang — 16+ integrated services including E-PPDB, E-Arsip, E-Ranking, E-Alumni, E-Tabungan, and school information services.</p>
+            <p data-i18n="proj.d14">Digital ecosystem portal (ALMAS) for MIN 1 Jombang — 16+ integrated services including E-PPDB, E-Arsip, E-Ranking, E-Alumni, E-Tabungan, and school information services.</p>
             <a href="https://digitalminsajo.sch.id/" target="_blank" rel="noopener" class="card-link">digitalminsajo.sch.id ↗</a>
           </article>
         </div>
@@ -197,7 +201,7 @@
 
     <section id="skills" class="section section-alt">
       <div class="container">
-        <h2 class="section-title">Skills</h2>
+        <h2 class="section-title" data-i18n="skills.title">Skills</h2>
         <div class="skills-grid">
           <div class="skill-group">
             <h3>Backend</h3>
@@ -208,20 +212,20 @@
             <div class="tags"><span>JavaScript</span><span>React</span><span>HTML/CSS</span></div>
           </div>
           <div class="skill-group">
-            <h3>Database</h3>
+            <h3 data-i18n="skills.db">Database</h3>
             <div class="tags"><span>MySQL</span><span>PostgreSQL</span><span>Database design</span></div>
           </div>
           <div class="skill-group">
-            <h3>Integrations</h3>
+            <h3 data-i18n="skills.integ">Integrations</h3>
             <div class="tags"><span>WhatsApp Cloud API (Meta)</span><span>Webhooks</span><span>Third-party APIs</span></div>
           </div>
           <div class="skill-group">
-            <h3>DevOps &amp; Tools</h3>
+            <h3 data-i18n="skills.devops">DevOps &amp; Tools</h3>
             <div class="tags"><span>Git / GitHub</span><span>Linux VPS</span><span>cPanel</span><span>Deployment</span></div>
           </div>
           <div class="skill-group">
-            <h3>Languages</h3>
-            <div class="tags"><span>Indonesian (Native)</span><span>English (Working)</span></div>
+            <h3 data-i18n="skills.lang">Languages</h3>
+            <div class="tags"><span data-i18n="skills.lang.id">Indonesian (Native)</span><span data-i18n="skills.lang.en">English (Working)</span></div>
           </div>
         </div>
       </div>
@@ -229,11 +233,11 @@
 
     <section id="certifications" class="section">
       <div class="container">
-        <h2 class="section-title">Certifications</h2>
+        <h2 class="section-title" data-i18n="cert.title">Certifications</h2>
         <div class="edu-list">
           <div class="edu-item cert-featured">
             <div class="edu-degree">🏅 Alibaba Cloud Certified Developer — Generative AI</div>
-            <div class="edu-school">Alibaba Cloud Training &amp; Certification · Valid until Jan 2027</div>
+            <div class="edu-school" data-i18n="cert.alibaba">Alibaba Cloud Training &amp; Certification · Valid until Jan 2027</div>
           </div>
           <div class="edu-item">
             <div class="edu-degree">AI Ready ASEAN — AI Literacy (12 Hours)</div>
@@ -256,7 +260,7 @@
             <div class="edu-school">2022</div>
           </div>
         </div>
-        <h3 class="gallery-title">Certificate Gallery <span class="gallery-hint">(click to enlarge)</span></h3>
+        <h3 class="gallery-title"><span data-i18n="cert.gallery">Certificate Gallery</span> <span class="gallery-hint" data-i18n="cert.hint">(click to enlarge)</span></h3>
         <div class="cert-gallery">
           <figure class="cert-shot">
             <a href="https://lh3.googleusercontent.com/d/1rIaJmieVd8cgrAlu9UsTZ-Z7-7O8ZQS3=w1600" target="_blank" rel="noopener"><img src="https://lh3.googleusercontent.com/d/1rIaJmieVd8cgrAlu9UsTZ-Z7-7O8ZQS3=w800" alt="Alibaba Cloud Certified Developer - Generative AI" loading="lazy"></a>
@@ -284,10 +288,10 @@
 
     <section id="education" class="section section-alt">
       <div class="container">
-        <h2 class="section-title">Education</h2>
+        <h2 class="section-title" data-i18n="edu.title">Education</h2>
         <div class="edu-list">
           <div class="edu-item">
-            <div class="edu-degree">Bachelor's Degree — Information Systems (S1 Sistem Informasi)</div>
+            <div class="edu-degree" data-i18n="edu.degree1">Bachelor's Degree — Information Systems (S1 Sistem Informasi)</div>
             <div class="edu-school">UNIPDU Jombang — Universitas Pesantren Darul Ulum</div>
           </div>
           <div class="edu-item">
@@ -300,8 +304,8 @@
 
     <section id="contact" class="section section-alt">
       <div class="container contact-box">
-        <h2 class="section-title">Let's Work Together</h2>
-        <p class="lead">I'm currently looking for remote software developer roles — backend PHP/Laravel, fullstack, or Node.js. My inbox is always open.</p>
+        <h2 class="section-title" data-i18n="contact.title">Let's Work Together</h2>
+        <p class="lead" data-i18n="contact.lead">I'm currently looking for remote software developer roles — backend PHP/Laravel, fullstack, or Node.js. My inbox is always open.</p>
         <div class="contact-grid">
           <a class="contact-card" href="mailto:hudamiftakh8@gmail.com">
             <span class="contact-icon">✉️</span>
@@ -310,7 +314,7 @@
           </a>
           <a class="contact-card" href="tel:+6285748496135">
             <span class="contact-icon">📱</span>
-            <strong>Phone / WhatsApp</strong>
+            <strong data-i18n="contact.phone">Phone / WhatsApp</strong>
             <span>+62 857-4849-6135</span>
           </a>
           <a class="contact-card" href="https://github.com/hudamiftakh" target="_blank" rel="noopener">
@@ -320,17 +324,17 @@
           </a>
           <div class="contact-card">
             <span class="contact-icon">📍</span>
-            <strong>Location</strong>
+            <strong data-i18n="contact.location">Location</strong>
             <span>Surabaya, Indonesia (UTC+7)</span>
           </div>
         </div>
-        <button class="btn btn-primary btn-print" onclick="window.print()">Download CV as PDF</button>
+        <button class="btn btn-primary btn-print" onclick="window.print()" data-i18n="btn.download">Download CV as PDF</button>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>© 2026 Miftahul Huda · Built with plain HTML/CSS · <a href="https://github.com/hudamiftakh/hudamiftakh.github.io" target="_blank" rel="noopener">Source</a></p>
+    <p>© 2026 Miftahul Huda · <span data-i18n="footer.built">Built with plain HTML/CSS</span> · <a href="https://github.com/hudamiftakh/hudamiftakh.github.io" target="_blank" rel="noopener" data-i18n="footer.source">Source</a></p>
   </footer>
 
   <script src="script.js"></script>
