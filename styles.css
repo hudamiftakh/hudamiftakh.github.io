@@ -240,6 +240,33 @@ a.contact-card:hover { transform: translateY(-3px); box-shadow: 0 12px 26px rgba
 .contact-card strong { font-size: .85rem; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
 .contact-card span:last-child { font-weight: 600; word-break: break-word; }
 
+/* ---------- Lightbox ---------- */
+.lightbox {
+  position: fixed; inset: 0; z-index: 100;
+  background: rgba(10, 18, 30, .88);
+  display: flex; align-items: center; justify-content: center; gap: 12px;
+  padding: 24px;
+}
+.lightbox[hidden] { display: none; }
+.lightbox-fig { margin: 0; max-width: min(920px, 92vw); text-align: center; }
+.lightbox-fig img {
+  max-width: 100%; max-height: 82vh; border-radius: 10px;
+  box-shadow: 0 24px 60px rgba(0,0,0,.5); background: #fff;
+}
+.lightbox-fig figcaption { color: #dbe5ef; margin-top: 12px; font-size: .9rem; }
+.lightbox-close {
+  position: absolute; top: 14px; right: 20px;
+  background: none; border: none; color: #fff;
+  font-size: 2.4rem; line-height: 1; cursor: pointer; padding: 4px 10px;
+}
+.lightbox-close:hover { color: #9fd9c9; }
+.lightbox-nav {
+  background: rgba(255,255,255,.12); border: none; color: #fff;
+  font-size: 1.8rem; width: 48px; height: 64px; border-radius: 12px;
+  cursor: pointer; flex-shrink: 0;
+}
+.lightbox-nav:hover { background: rgba(255,255,255,.25); }
+
 /* ---------- Footer ---------- */
 .footer { text-align: center; padding: 28px; color: var(--muted); font-size: .88rem; border-top: 1px solid var(--border); }
 .footer a { color: var(--accent); text-decoration: none; }
@@ -278,7 +305,7 @@ a.contact-card:hover { transform: translateY(-3px); box-shadow: 0 12px 26px rgba
 
   .nav, .hero-cta, .btn, .hamburger, .footer,
   .card-link, .proj-link, .proj-badge, .stats, .hero-kicker,
-  .cert-gallery, .gallery-title { display: none !important; }
+  .cert-gallery, .gallery-title, .lightbox { display: none !important; }
 
   body { font-size: 10pt; line-height: 1.45; color: #1c1c1c; }
 
