@@ -157,10 +157,10 @@ body {
   transition: border-color .15s ease, box-shadow .15s ease;
 }
 .proj-item:hover { border-color: var(--accent); box-shadow: 0 8px 22px rgba(15,27,45,.08); }
-.proj-title-row { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.proj-title-row { grid-column: 1; grid-row: 1; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
 .proj-item h3 { font-size: 1.05rem; }
-.proj-item p { color: var(--muted); font-size: .93rem; }
-.proj-item .tags { margin-top: 8px; }
+.proj-item > p { grid-column: 1; grid-row: 2; color: var(--muted); font-size: .93rem; }
+.proj-item > .tags { grid-column: 1; grid-row: 3; margin-top: 8px; }
 .proj-badge {
   background: var(--accent); color: #fff;
   font-size: .7rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
